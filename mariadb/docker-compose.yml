@@ -1,16 +1,20 @@
-version: "3.7"
+version: "3.8"
 
 services:
   mariadb:
     image: mariadb:latest
+    container_name: mariadb
     restart: always
     ports:
       - 3306:3306
+    volumes:
+      - ./mariadb/conf.d:/etc/mysql/conf.d
     environment:
       MYSQL_ROOT_PASSWORD: 123456
 
   adminer:
     image: adminer:latest
+    container_name: adminer
     restart: always
     ports:
-      - 7000:8080
+      - 8080:8080
