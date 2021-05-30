@@ -1,16 +1,14 @@
 version: "3.3"
 
 services:
-  mariadb:
-    image: mariadb:latest
-    container_name: mariadb
+  postgres:
+    image: postgres:latest
+    container_name: postgres
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
-    volumes:
-      - ./mariadb/conf.d:/etc/mysql/conf.d
+      POSTGRES_PASSWORD: a123456
     ports:
-      - 3306:3306
+      - 5432:5432
 
   adminer:
     image: adminer:latest
