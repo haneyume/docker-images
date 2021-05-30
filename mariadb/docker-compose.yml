@@ -6,7 +6,7 @@ services:
     container_name: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: a123456
     volumes:
       - ./mariadb/conf.d:/etc/mysql/conf.d
     ports:
