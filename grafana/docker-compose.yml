@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: always
+    ports:
+      - 8085:3000
