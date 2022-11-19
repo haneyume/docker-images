@@ -7,3 +7,5 @@ services:
     restart: always
     ports:
       - 8000:8000
+
+# DYNAMO_ENDPOINT=http://localhost:8000 dynamodb-admin

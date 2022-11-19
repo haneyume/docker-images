@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  label-studio:
+    image: heartexlabs/label-studio:latest
+    container_name: label-studio
+    restart: always
+    volumes:
+      - ./mydata:/label-studio/data
+    ports:
+      - 8082:8080
