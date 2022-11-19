@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+  odoo:
+    image: odoo:latest
+    container_name: odoo
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      HOST: postgres
+      USER: odoo
+      PASSWORD: odoo
+    ports:
+      - 8069:8069
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
